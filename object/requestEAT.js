@@ -107,7 +107,7 @@ class RequestEAT {
         await page.locator(locator.inputFile).nth(7).setInputFiles(keyword.keywordRoute);
         //await page.locator(locator.inputFile).nth(8).setInputFiles(keyword.keywordRoute);
         await page.locator(locator.autocompleteInput).fill('Fabricación de muebles')
-        await page.waitForTimeout(100)
+        await page.waitForTimeout(1000)
         await page.getByText('Fabricación de muebles').click()
         //await page.locator('#eat-concept-number').fill(numeroAleatorio8Digitos())
         //await page.locator('#eat-concept-date').fill(selectBirthDay())
@@ -115,6 +115,7 @@ class RequestEAT {
         await page.locator('#eat-agreement-date').fill(selectBirthDay())
         await page.locator('#eat-statutes-number').fill(numeroAleatorio8Digitos())
         await page.locator('#eat-statutes-date').fill(selectBirthDay())
+        await page.waitForTimeout(1000)
         await page.getByText('Siguiente').click()
 
         //Cuarto formulario Envio de solicitud
